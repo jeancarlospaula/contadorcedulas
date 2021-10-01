@@ -60,7 +60,7 @@ function contadorNotas(valor)
 				nota = nota + 1
                 if(!parar){
                     if(nota > 0){
-                        document.write('<img src="https://www.bcb.gov.br/novasnotas/assets/img/section/200/200_front.jpg" width="500px"/>')
+                        document.write('<img src="https://upload.wikimedia.org/wikipedia/commons/7/77/200_reais_Brazil.webp" width="500px"/>')
                     }
             }
 			}
@@ -75,7 +75,7 @@ function contadorNotas(valor)
 				if(valor == 101 || valor == 103){
 					parar = true
                     valor = valor - 50
-                    document.write('<img src="https://www.bcb.gov.br/novasnotas/assets/img/section/50/50_front.jpg" width="500px"/>')
+                    document.write('<img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/50_Brazil_real_First_Obverse.jpg" width="500px"/>')
 					nota50(valor)
 				}
 				valor = valor - 100
@@ -102,7 +102,7 @@ function contadorNotas(valor)
 				nota = nota + 1
                 if(!parar){
                     if(nota > 0){
-                        document.write('<img src="https://www.bcb.gov.br/novasnotas/assets/img/section/50/50_front.jpg" width="500px"/>')
+                        document.write('<img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/50_Brazil_real_First_Obverse.jpg" width="500px"/>')
                     }
             }
 			}
@@ -120,17 +120,17 @@ function contadorNotas(valor)
 				valor = valor - 20
 				nota = nota + 1
 				if(valor == 11 || valor == 13){
-                    document.write('<img src="https://www.bcb.gov.br/novasnotas/assets/img/section/20/20_front.jpg" width="500px"/>')
+                    document.write('<img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/20_Brazil_real_First_Obverse.jpg" width="500px"/>')
 					nota10(valor)
 				}
 				if(valor == 21 || valor == 23){
 					nota = 1
-                    document.write('<img src="https://www.bcb.gov.br/novasnotas/assets/img/section/20/20_front.jpg" width="500px"/>')
+                    document.write('<img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/20_Brazil_real_First_Obverse.jpg" width="500px"/>')
 					nota10(valor)
 				}
                 if(!parar){
                     if(nota > 0){
-                        document.write('<img src="https://www.bcb.gov.br/novasnotas/assets/img/section/20/20_front.jpg" width="500px"/>')
+                        document.write('<img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/20_Brazil_real_First_Obverse.jpg" width="500px"/>')
                     }
             }				
 			}
@@ -148,7 +148,7 @@ function contadorNotas(valor)
 			while(valor >= 10){
 				if(valor == 21 || valor == 23){
 					nota = 1
-					document.write('<img src="https://www.bcb.gov.br/novasnotas/assets/img/section/10/10_front.jpg" width="500px"/>')
+					document.write('<img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/10_Brazil_real_Second_Obverse.jpg" width="500px"/>')
 					valor = valor - 10
 					nota2(valor)
 					valor = valor - 21
@@ -157,7 +157,7 @@ function contadorNotas(valor)
 					valor = valor - 10
 					nota = nota + 1
                     if(nota > 0){
-                        document.write('<img src="https://www.bcb.gov.br/novasnotas/assets/img/section/10/10_front.jpg" width="500px"/>')
+                        document.write('<img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/10_Brazil_real_Second_Obverse.jpg" width="500px"/>')
                     }
                 
                 }
