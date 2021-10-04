@@ -5,14 +5,21 @@ var sacarNovamente
 start()
 
 function start(){
-    var saldo = parseFloat(prompt("Digite um valor para sacar"))
+    var saldo = parseFloat(prompt("Digite um valor para sacar").replace(",","."))
+	console.log(saldo%2)
     if(saldo <= 0 || saldo == 1 || saldo == 3){
         if(confirm("Não é possível sacar R$" + saldo + ".\nPressione OK para digitar outro valor")){
             start()
         }
-    }else (
+    }else if(saldo%2 != 0 && saldo%2 != 1){
+		if(confirm("Não é possível sacar valores decimais ("+ saldo.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
+		+ "). \nPressione OK para digitar outro valor")){
+            start()
+        }
+	}
+	else{
         contadorNotas(saldo)
-    )
+	}
 
 }
 
@@ -60,7 +67,7 @@ function contadorNotas(valor)
 				nota = nota + 1
                 if(!parar){
                     if(nota > 0){
-                        document.write('<img src="https://upload.wikimedia.org/wikipedia/commons/7/77/200_reais_Brazil.webp" width="500px"/>')
+                        document.write('<img src="https://upload.wikimedia.org/wikipedia/commons/7/77/200_reais_Brazil.webp" width="250px"/>')
                     }
             }
 			}
@@ -75,14 +82,14 @@ function contadorNotas(valor)
 				if(valor == 101 || valor == 103){
 					parar = true
                     valor = valor - 50
-                    document.write('<img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/50_Brazil_real_First_Obverse.jpg" width="500px"/>')
+                    document.write('<img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/50_Brazil_real_First_Obverse.jpg" width="250px"/>')
 					nota50(valor)
 				}
 				valor = valor - 100
 				nota = nota + 1
                 if(!parar){
                     if(nota > 0){
-                        document.write('<img src="https://upload.wikimedia.org/wikipedia/commons/0/01/100_Brazil_real_Second_Obverse.jpg" width="500px"/>')
+                        document.write('<img src="https://upload.wikimedia.org/wikipedia/commons/0/01/100_Brazil_real_Second_Obverse.jpg" width="250px"/>')
                     }
             }
 			}
@@ -102,7 +109,7 @@ function contadorNotas(valor)
 				nota = nota + 1
                 if(!parar){
                     if(nota > 0){
-                        document.write('<img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/50_Brazil_real_First_Obverse.jpg" width="500px"/>')
+                        document.write('<img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/50_Brazil_real_First_Obverse.jpg" width="250px"/>')
                     }
             }
 			}
@@ -120,17 +127,17 @@ function contadorNotas(valor)
 				valor = valor - 20
 				nota = nota + 1
 				if(valor == 11 || valor == 13){
-                    document.write('<img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/20_Brazil_real_First_Obverse.jpg" width="500px"/>')
+                    document.write('<img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/20_Brazil_real_First_Obverse.jpg" width="250px"/>')
 					nota10(valor)
 				}
 				if(valor == 21 || valor == 23){
 					nota = 1
-                    document.write('<img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/20_Brazil_real_First_Obverse.jpg" width="500px"/>')
+                    document.write('<img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/20_Brazil_real_First_Obverse.jpg" width="250px"/>')
 					nota10(valor)
 				}
                 if(!parar){
                     if(nota > 0){
-                        document.write('<img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/20_Brazil_real_First_Obverse.jpg" width="500px"/>')
+                        document.write('<img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/20_Brazil_real_First_Obverse.jpg" width="250px"/>')
                     }
             }				
 			}
@@ -148,7 +155,7 @@ function contadorNotas(valor)
 			while(valor >= 10){
 				if(valor == 21 || valor == 23){
 					nota = 1
-					document.write('<img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/10_Brazil_real_Second_Obverse.jpg" width="500px"/>')
+					document.write('<img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/10_Brazil_real_Second_Obverse.jpg" width="250px"/>')
 					valor = valor - 10
 					nota2(valor)
 					valor = valor - 21
@@ -157,7 +164,7 @@ function contadorNotas(valor)
 					valor = valor - 10
 					nota = nota + 1
                     if(nota > 0){
-                        document.write('<img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/10_Brazil_real_Second_Obverse.jpg" width="500px"/>')
+                        document.write('<img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/10_Brazil_real_Second_Obverse.jpg" width="250px"/>')
                     }
                 
                 }
@@ -185,7 +192,7 @@ function contadorNotas(valor)
 				valor = valor - 5
 				nota = nota + 1
                     if(nota > 0){
-                        document.write('<img src="https://upload.wikimedia.org/wikipedia/commons/8/80/5_Brazil_real_Second_Obverse.jpg" width="500px"/>')
+                        document.write('<img src="https://upload.wikimedia.org/wikipedia/commons/8/80/5_Brazil_real_Second_Obverse.jpg" width="250px"/>')
                     }
                 }
 			}
@@ -197,10 +204,10 @@ function contadorNotas(valor)
 				while(valor > 2 && valor != 5){
 					valor = valor - 2
 					nota = nota + 1
-                    document.write('<img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/2_Brazil_real_Second_Obverse.jpg" width="500px"/>')
+                    document.write('<img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/2_Brazil_real_Second_Obverse.jpg" width="250px"/>')
 				}
 				valor = valor - 5
-				document.write('<img src="https://upload.wikimedia.org/wikipedia/commons/8/80/5_Brazil_real_Second_Obverse.jpg" width="500px"/>')
+				document.write('<img src="https://upload.wikimedia.org/wikipedia/commons/8/80/5_Brazil_real_Second_Obverse.jpg" width="250px"/>')
 				interromper_saque = true
 				parar = true
                 zerar_valor = true
@@ -211,7 +218,7 @@ function contadorNotas(valor)
 				valor = valor - 2
 				nota = nota + 1
                 if(nota > 0){
-                    document.write('<img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/2_Brazil_real_Second_Obverse.jpg" width="500px"/>')
+                    document.write('<img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/2_Brazil_real_Second_Obverse.jpg" width="250px"/>')
                 }	
 			}
             return valor
