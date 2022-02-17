@@ -67,7 +67,7 @@ function contadorNotas(valor)
 				nota = nota + 1
                 if(!parar){
                     if(nota > 0){
-                        document.write('<img src="https://upload.wikimedia.org/wikipedia/commons/7/77/200_reais_Brazil.webp" width="250px"/>')
+                        document.write('<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1J_LT_xqIeXO2WYaIaUzp6ME2m7q7gMI2oyQ9Z1SEQOr2CnvK8_YZflm1-cYtye4PgSw&usqp=CAU" width="250px"/>')
                     }
             }
 			}
